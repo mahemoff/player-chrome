@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<title>Player FM</title>
+
+		<link href="style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="lib/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="lib/underscore.js"></script>
+    <script type="text/javascript" src="lib/jquery.timeago.js"></script>
+    <script src="app.js" type="text/javascript"></script>
+
+	</head>
+
+	<body>
+
+    <div id='appContainer'>
+      <table class='episodes'>
+      </table>
+    </div>
+
+    <div id='appTemplate' class='template'>
+      <% _(user.episodes).each(function(episode) { %>
+        <%= episode.title %>
+        <audio src='<%= episode.url %>' controls='controls'></audio>
+      <% } %>
+    </div>
+
+	</body>
+
+</html>

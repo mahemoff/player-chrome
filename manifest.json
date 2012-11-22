@@ -1,0 +1,21 @@
+{
+	"name": "Player FM",
+	"version": "0.1.0",
+	"manifest_version": 2,
+	"minimum_chrome_version": "23",
+	"description": "Player FM App For Chrome",
+	"icons": {
+		"16": "assets/icon.png",
+		"128": "assets/icon.png"
+	},
+	"app": {
+    "background": {
+      "scripts": ["lib/jquery-1.7.2.min.js", "lib/underscore.js", "lib/filer.js", "main.js"]
+    }
+  },
+	"offline_enabled": true,
+	"permissions": ["storage",
+									"notifications",
+									"<all_urls>"
+								 ]
+}
